@@ -1,4 +1,4 @@
-package leecode;
+package yaoguang;
 
 public class nero_euler
 {
@@ -6,20 +6,13 @@ public class nero_euler
     public static int findpath(int m, int n, int N, int i, int j)
     {
         int max[][] = new int[m][n];
-        max[i][j]=1;
-        derect(max,m,n,N,i-1,j);
-        derect(max,m,n,N,i+1,j);
-        derect(max,m,n,N,i,j-1);
-        derect(max,m,n,N,i,j+1);
+        derect(max,m,n,N,i,j);
         return total;
     }
     public static void derect(int[][] max,int m, int n, int N, int i, int j)
     {
         if(N<0) return;
-        if(i<0)  {total+=1;return;}
-        if(i>=m) {total+=1;return;}
-        if(j<0)  {total+=1;return;}
-        if(j>=n) {total+=1;return;}
+        if(i<0||i>=m||j<0||j>=n)  {total+=1;return;}
         if(max[i][j]==1) {return;}
         max[i][j]=1;
         derect(max,m,n,N-1,i-1,j);
