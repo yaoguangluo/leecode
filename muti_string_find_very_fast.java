@@ -1,10 +1,12 @@
+//speed =O(len(in)*log(len(a))/log(len(b)))
+//method design by yaoguang
 public class Sfinder
 {
     public static  void main(String []argv)
     {
-        String a = "ajdsiasiodjiosajdb";
+        String a = "ajdsiasiodjiajdsTPOiasioosajdb";
         String b = "bcfsadfasdas";
-        String in= "bacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdb";
+        String in= "bacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsiasiodjiosajdbiodjiosajdbbacdajdsiasiodjdsiasiodjiosaajdsTPOiasiodjiosajdbiodjiosajdbjiosajdb";
         System.out.println(find(a,b,in));
 
 
@@ -59,6 +61,12 @@ public class Sfinder
                 {
                     return 1;
                 }
+
+                if(i+j>=in.length())
+               {
+                   return 1;
+                }
+
                 if(a.charAt(j)!=in.charAt(j+i))
                 {
                     return 0;
