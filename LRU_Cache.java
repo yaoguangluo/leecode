@@ -1,4 +1,6 @@
 //这段代码是完全没用linkedhashmap思想的数据结构算法实现lru cache。通过测试我得到17/18分， 
+
+//供观赏
 //罗瑶光
 
 public class LRUCache 
